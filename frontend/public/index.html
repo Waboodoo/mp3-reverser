@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebApplication">
+    <head>
+        <title>3pm - online MP3 reverser</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="mp3 reverser,reverse mp3s,reverse music,reverse audio,free,online audio reverser,music reverser,wav reverser,listen music backwards">
+        <meta name="description" content="3pm online mp3 reverser is a free web service that reverses your music files for you so you can listen to your songs backwards. Useless but fun.">
+        <meta name="author" content="Roland Meyer - rmy.ch">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta itemprop="name" content="3pm - online MP3 reverser">
+        <meta itemprop="description" content="3pm online mp3 reverser is a free web service that reverses your music files for you so you can listen to your songs backwards. Useless but fun.">
+        <meta itemprop="image" content="https://www.mp3-reverser.com/images/logo.png">
+        <meta property="og:title" content="3pm - online MP3 reverser">
+        <meta property="og:image" content="https://www.mp3-reverser.com/images/3pm-og.png">
+        <meta property="og:description" content="3pm online mp3 reverser is a free web service that reverses your music files for you so you can listen to your songs backwards. Useless but fun.">
+        <meta property="og:url" content="https://www.mp3-reverser.com">
+        <meta name="theme-color" content="#335d84">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+        <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>main.css">
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <script>
+            function showTermsOfService() {
+                document.getElementById('tos').classList.add('visible');
+            }
+        </script>
+    </head>
+    <body itemscope itemtype="http://schema.org/Product">
+        <div class="wrapper">
+            <header title="3pm - online MP3 reverser">
+                <div>
+                    <figure class="radio">
+                        <img src="<%= BASE_URL %>images/logo.png" alt="3pm - online MP3 reverser">
+                    </figure>
+                    <h1>
+                        <span class="name" itemprop="name">3pm</span> <span class="dash">-</span> <span class="title" itemprop="description">reverse MP3s online</span>
+                    </h1>
+                </div>
+            </header>
+            <main class="clearfix">
+                <div class="ad">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins
+                        class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-7802882632288612"
+                        data-ad-slot="7250728286"
+                        data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+
+                <noscript>
+                    <strong>mp3-reverser.com requires JavaScript to work.</strong>
+                </noscript>
+
+                <div id="app"></div>
+
+                <section class="text">
+                    <h2>What is 3pm?</h2>
+                    <p>3pm is a free online service that allows you to listen to your MP3 music and voice files in reverse.</p>
+                    <p><em>"Why would I want to do that?"</em> you ask?</p>
+                    <p>Well, maybe you wonder what your favourite song sounds like when played backwards? Or you are looking for hidden messages in old rock music or political speeches? Or perhaps you just like strange noises and weird voices. Do you really need a reason?</p>
+                    <p>In any case, simply click the button above to get started. The maximum file size is 20Mb and the supported file formats are <em>mp3</em>, <em>ogg,</em> and <em>wav</em>.</p>
+                    <p>Enjoy!</p>
+                </section>
+                <section class="text">
+                    <h2>Terms of Service</h2>
+                    <p>3pm (the service) is provided by <a href="https://www.rmy.ch/">Roland Meyer</a> (we). By using the service or parts of it, the user (you) agrees to the <a href="javascript:showTermsOfService()">terms of service</a>. Do not use the service if you do not agree.</p>
+                    <ul id="tos" class="tos">
+                        <li>We are in no way responsible for the files you upload to and/or download from our servers or potential data errors or losses that may result. You use the service at your own risk and responsibility.</li>
+                        <li>We are not required in any way to provide the service and keep it available, and we do not guarantee that all uploaded files are processed. We are allowed to stop the service or ban users from using it without stating reasons and without prior warning.</li>
+                        <li>The uploaded files and their reversed counter-parts (if any) are stored for at least 1 hour, during which they can only be accessed by means of the link provided to the user after processing. The contents of these files are never presented publicly and will be fully deleted after a period of at most 24 hours.</li>
+                        <li>You are not allowed to use 3pm or any part of it to distribute (music) files. In particular you are not allowed to use the download link given to you multiple times and you are not allowed to give it to others.</li>
+                        <li>We reserve the right to store basic information such as your operating system, browser and country. We will however only ever use this information for statistical purposes as part of the service itself and never give it to 3rd parties or use them to contact users of the service. Part of this information is collected through Google Analytics and Google AdSense. <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Click here</a> to learn more.</li>
+                        <li>We reserve the right to make changes to these terms and conditions without announcement. The changes apply to uses of the service from the date the changes were published and do not affect past uses of the service.</li>
+                    </ul>
+                </section>
+                <section class="text">
+                    <h2>Software Licences</h2>
+                    <p>3pm uses open source software LAME (<a href="https://lame.sourceforge.net/">lame.sourceforge.net</a>) and SoX (<a href="https://sox.sourceforge.net/">sox.sourceforge.net</a>).</p>
+                </section>
+            </main>
+        </div>
+        <footer class="clearfix">
+            <div>
+                <div class="powered-by">
+                    <span>powered by <a href="https://www.rmy.ch">rmy.ch</a></span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

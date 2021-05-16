@@ -1,0 +1,3 @@
+Flask==1.1.2
+apscheduler==3.7.0
+gunicorn

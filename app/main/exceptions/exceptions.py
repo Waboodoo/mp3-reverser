@@ -1,0 +1,2 @@
+class InvalidSessionIdError(Exception):
+    pass
