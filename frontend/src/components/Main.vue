@@ -139,10 +139,11 @@ export default {
   display: flex
   justify-content: flex-start
 
-.file-input-label
-  .has-file &
-    border-top-right-radius: 0
-    border-bottom-right-radius: 0
+@media screen and (min-width: 480px)
+  .file-input-label
+    .has-file &
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
 
 .file-name-container
   flex-grow: 1
@@ -224,15 +225,35 @@ export default {
 
 .submit-button
   display: none
-  margin-left: 10px
+
+  @media screen and (min-width: 480px)
+    margin-left: 10px
 
   &.visible
     display: block
 
 .download-button
   display: none
-  margin-left: 10px
+
+  @media screen and (min-width: 480px)
+    margin-left: 10px
 
   &.visible
     display: block
+
+@media screen and (max-width: 479px)
+  .button
+    width: 100%
+
+  .file-input-container
+    flex-direction: column
+
+  .file-name-container
+    border-top-left-radius: 20px
+    border-bottom-left-radius: 20px
+    margin: 10px 0
+
+  .file-name
+    transition: none
+
 </style>
