@@ -4,7 +4,7 @@ from enum import auto
 from multiprocessing import Process
 
 from app.main.exceptions.exceptions import InvalidSessionIdError
-from app.main.processors.StereoShiftProcessor import StereoShiftProcessor
+from app.main.processors.Processor import Processor
 from app.main.utils.session_ids import generate_session_id
 from app.main.utils.session_ids import is_valid_session_id
 
@@ -44,8 +44,7 @@ class Session:
         process.start()
 
     def _process(self, parameters):
-        # TODO: Pick appropriate processor for given parameters, e.g. using a factory
-        processor = StereoShiftProcessor()
+        processor = Processor()
         processor.process(
             working_directory=self.get_session_directory(),
             input_file=INPUT_FILE,

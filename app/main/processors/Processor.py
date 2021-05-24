@@ -10,7 +10,7 @@ class Processor:
     def process(self, working_directory, input_file, output_file, error_file, parameters):
         process = subprocess.run(
             [
-                os.path.join('/app', 'scripts', self.script_name),
+                os.path.join('/app', 'scripts', 'process.sh'),
                 input_file,
                 output_file,
             ] + self._generate_command_args(parameters),
@@ -26,5 +26,17 @@ class Processor:
                     'error': process.stderr.decode('utf-8'),
                 }))
 
-    def _generate_command_args(self, parameters):
-        return []
+    @staticmethod
+    def _generate_command_args(parameters):
+        args = []
+        if parameters.reverse:
+            args.append('--reverse')
+        if parameters.speed != 100:
+            args.append('--speed')
+            args.append(str(parameters.speed / 100))
+        if parameters.keep_pitch:
+            args.append('--keep-pitch')
+        if parameters.stereo_shift != 0:
+            args.append('--stereo-shift')
+            args.append(str(parameters.stereo_shift))
+        return args
