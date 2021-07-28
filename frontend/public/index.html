@@ -38,14 +38,16 @@
             </header>
             <main class="clearfix">
                 <div class="ad">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins
-                        class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-7802882632288612"
-                        data-ad-slot="7250728286"
-                        data-ad-format="auto"></ins>
-                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    <script>
+                        fetch('/injected/ad.html')
+                            .then((response) => response.ok ? response.text() : '')
+                            .then((responseText) => {
+                                document.getElementsByClassName('ad')[0].innerHTML = responseText;
+                            })
+                            .catch(() => {
+                                console.info('Could not load ad, ignoring');
+                            });
+                    </script>
                 </div>
 
                 <noscript>
