@@ -38,16 +38,7 @@
             </header>
             <main class="clearfix">
                 <div class="ad">
-                    <script>
-                        fetch('/injected/ad.html')
-                            .then((response) => response.ok ? response.text() : '')
-                            .then((responseText) => {
-                                document.getElementsByClassName('ad')[0].innerHTML = responseText;
-                            })
-                            .catch(() => {
-                                console.info('Could not load ad, ignoring');
-                            });
-                    </script>
+                    <%= process.env.VUE_APP_ADVERTISEMENT %>
                 </div>
 
                 <noscript>
